@@ -67,7 +67,7 @@ static RKObjectManager  *sharedManager = nil;
  @return An `NSArray` object whose elements are `RKResponseDescriptor` objects matching the given path and method.
  */
 #ifdef RKCoreDataIncluded
-static NSArray *RKFilteredArrayOfResponseDescriptorsMatchingPathAndMethod(NSArray *responseDescriptors, NSString *path, RKRequestMethod method)
+NSArray *RKFilteredArrayOfResponseDescriptorsMatchingPathAndMethod(NSArray *responseDescriptors, NSString *path, RKRequestMethod method)
 {
     NSIndexSet *indexSet = [responseDescriptors indexesOfObjectsPassingTest:^BOOL(RKResponseDescriptor *responseDescriptor, NSUInteger idx, BOOL *stop) {
         return [responseDescriptor matchesPath:path] && (method & responseDescriptor.method);

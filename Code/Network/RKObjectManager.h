@@ -33,6 +33,8 @@
 @class RKManagedObjectStore, RKObjectRequestOperation, RKManagedObjectRequestOperation,
 RKMappingResult, RKRequestDescriptor, RKResponseDescriptor;
 
+NSArray *RKFilteredArrayOfResponseDescriptorsMatchingPathAndMethod(NSArray *responseDescriptors, NSString *path, RKRequestMethod method);
+
 /**
  The `RKObjectManager` class provides a centralized interface for performing object mapping based HTTP request and response operations. It encapsulates common configuration such as request/response descriptors and routing, provides for the creation of `NSURLRequest` and `RKObjectRequestOperation` objects, and one-line methods to enqueue object request operations for the basic HTTP request methods (GET, POST, PUT, DELETE, etc).
  
